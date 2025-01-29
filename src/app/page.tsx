@@ -1,12 +1,28 @@
 import { ThemeToggler } from "@/components";
-import { HeroSection } from "@/sections";
+import {
+  ContactUsSection,
+  FaqSection,
+  FeaturesSection,
+  HeroSection,
+  PricingSection,
+  ProductDemoSection,
+  TestimonialsSection,
+  TrustedPartnersSection,
+} from "@/sections";
 
 export default function Home() {
   return (
     <div className="bg-white dark:bg-black min-h-screen">
-      <section>
-        <HeroSection />
+      <HeroSection />
+      <TrustedPartnersSection />
+      <section className="triangle">
+        <FeaturesSection />
       </section>
+      <ProductDemoSection />
+      <TestimonialsSection />
+      <PricingSection />
+      <FaqSection />
+      <ContactUsSection />
       <ThemeToggler />
     </div>
   );

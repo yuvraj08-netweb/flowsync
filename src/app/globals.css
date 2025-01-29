@@ -24,6 +24,7 @@
     --input: 240 5.9% 90%;
     --ring: 240 5.9% 10%;
     --radius: 0.5rem;
+    --features-background: #333146;
   }
 
   .dark {
@@ -56,4 +57,23 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+.triangle {
+  position: relative;
+  background: var(--features-background);
+  height: 500px;
+}
+
+.triangle::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 100px 100px 0 100px;
+  border-color:  var(--features-background) transparent transparent transparent;
+  left: 50%;
+  transform: translateX(-50%) translateY(100%);
 }
