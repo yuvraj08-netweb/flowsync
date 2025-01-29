@@ -64,16 +64,16 @@ const Contact1 = () => {
           </div>
 
           <div className="justify-center flex items-center">
-            <div className="rounded-md max-w-sm flex flex-col border p-8 gap-4">
+            <div className="rounded-md w-full max-w-lg flex flex-col border p-8 gap-4">
               <p>Book a meeting</p>
-              <div className="grid w-full max-w-sm items-center gap-1">
+              <div className="grid w-full max-w-lg items-center gap-1">
                 <Label htmlFor="picture">Date</Label>
                 <Popover>
                   <PopoverTrigger asChild>
                     <Button
                       variant={"outline"}
                       className={cn(
-                        "w-full max-w-sm justify-start text-left font-normal",
+                        "w-full max-w-lg justify-start text-left font-normal",
                         !date && "text-muted-foreground"
                       )}
                     >
@@ -91,17 +91,17 @@ const Contact1 = () => {
                   </PopoverContent>
                 </Popover>
               </div>
-              <div className="grid w-full max-w-sm items-center gap-1">
+              <div className="grid w-full max-w-lg items-center gap-1">
                 <Label htmlFor="firstname">First name</Label>
                 <Input id="firstname" type="text" />
               </div>
-              <div className="grid w-full max-w-sm items-center gap-1">
+              <div className="grid w-full max-w-lg items-center gap-1">
                 <Label htmlFor="lastname">Last name</Label>
                 <Input id="lastname" type="text" />
               </div>
-              <div className="grid w-full max-w-sm items-center gap-1">
-                <Label htmlFor="picture">Upload resume</Label>
-                <Input id="picture" type="file" />
+              <div className="grid w-full max-w-lg items-center gap-1">
+                <Label htmlFor="picture">Email</Label>
+                <Input id="picture" type="email" />
               </div>
 
               <Button className="gap-4 w-full">

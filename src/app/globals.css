@@ -62,7 +62,7 @@
 .triangle {
   position: relative;
   background: var(--features-background);
-  height: 500px;
+  height: 550px;
 }
 
 .triangle::before {

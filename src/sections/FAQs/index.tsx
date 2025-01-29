@@ -7,6 +7,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
+import faqs from "./FaqsList";
 
 const FAQ1 = () => (
   <div className="w-full py-20 lg:py-40">
@@ -19,33 +20,30 @@ const FAQ1 = () => (
             </div>
             <div className="flex gap-2 flex-col">
               <h4 className="text-3xl md:text-5xl tracking-tighter max-w-xl text-left font-regular">
-                This is the start of something new
+                Got Questions? We&apos;ve Got Answers!
               </h4>
               <p className="text-lg max-w-xl lg:max-w-lg leading-relaxed tracking-tight text-muted-foreground  text-left">
-                Managing a small business today is already tough. Avoid further
-                complications by ditching outdated, tedious trade methods. Our
-                goal is to streamline SMB trade, making it easier and faster
-                than ever.
+                Explore our frequently asked questions to learn more about how
+                our platform works, its features, and how it can help you
+                streamline your workflow. Still have questions? Feel free to
+                reach out!
               </p>
             </div>
             <div className="">
               <Button className="gap-4" variant="outline">
-                Any questions? Reach out <PhoneCall className="w-4 h-4" />
+                Still Have questions? Reach out <PhoneCall className="w-4 h-4" />
               </Button>
             </div>
           </div>
         </div>
         <Accordion type="single" collapsible className="w-full">
-          {Array.from({ length: 8 }).map((_, index) => (
+          {faqs.map((faq, index) => (
             <AccordionItem key={index} value={"index-" + index}>
               <AccordionTrigger>
-                This is the start of something new
+               {faq.question}
               </AccordionTrigger>
               <AccordionContent>
-                Managing a small business today is already tough. Avoid further
-                complications by ditching outdated, tedious trade methods. Our
-                goal is to streamline SMB trade, making it easier and faster
-                than ever.
+          {faq.answer}
               </AccordionContent>
             </AccordionItem>
           ))}

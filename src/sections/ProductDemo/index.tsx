@@ -20,7 +20,7 @@ const Feature9 = () => {
     } else if ("clientX" in e) {
       x = e.clientX - rect.left;
     }
-    
+
     const percentage = (x / rect.width) * 100;
     setInset(percentage);
   };
@@ -34,10 +34,12 @@ const Feature9 = () => {
           </div>
           <div className="flex gap-2 flex-col">
             <h2 className="text-3xl md:text-5xl tracking-tighter lg:max-w-xl font-regular">
-              Something new!
+              Transform Challenges into Growth!
             </h2>
             <p className="text-lg max-w-xl lg:max-w-xl leading-relaxed tracking-tight text-muted-foreground">
-              Managing a small business today is already tough.
+              Running a business can be overwhelming, but the right tools can
+              turn struggles into success. Empower your team with insights,
+              automation, and seamless collaboration to drive real results.
             </p>
           </div>
           <div className="pt-12 w-full">
@@ -71,7 +73,7 @@ const Feature9 = () => {
                 </button>
               </div>
               <Image
-                src="/feature8.png"
+                src="/assets/sliderTwo.jpg"
                 alt="feature8"
                 width={1920}
                 height={1080}
@@ -82,7 +84,7 @@ const Feature9 = () => {
                 }}
               />
               <Image
-                src="/darkmode-feature8.png"
+                src="/assets/sliderOne.jpg"
                 alt="darkmode-feature8.png"
                 width={1920}
                 height={1080}
