@@ -8,7 +8,7 @@ import {
   CarouselItem,
 } from "@/components/ui/carousel";
 import { User } from "lucide-react";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { testimonials } from "./testimonialsData";
 
 const Testimonials1 = () => {
   const [api, setApi] = useState<CarouselApi>();
@@ -39,27 +39,22 @@ const Testimonials1 = () => {
           </h2>
           <Carousel setApi={setApi} className="w-full">
             <CarouselContent>
-              {Array.from({ length: 15 }).map((_, index) => (
+              {testimonials.map((testimonial, index) => (
                 <CarouselItem className="lg:basis-1/2" key={index}>
                   <div className="bg-muted rounded-md h-full lg:col-span-2 p-6 aspect-video flex justify-between flex-col">
                     <User className="w-8 h-8 stroke-1" />
                     <div className="flex flex-col gap-4">
                       <div className="flex flex-col">
                         <h3 className="text-xl tracking-tight">
-                          Best decision
+                          {testimonial.heading}
                         </h3>
                         <p className="text-muted-foreground max-w-xs text-base">
-                          Our goal was to streamline SMB trade, making it easier
-                          and faster than ever and we did it together.
+                          {testimonial.text}
                         </p>
                       </div>
                       <p className="flex flex-row gap-2 text-sm items-center">
                         <span className="text-muted-foreground">By</span>{" "}
-                        <Avatar className="h-6 w-6">
-                          <AvatarImage src="https://github.com/shadcn.png" />
-                          <AvatarFallback>CN</AvatarFallback>
-                        </Avatar>
-                        <span>John Johnsen</span>
+                        <span>{testimonial.author}, {testimonial.position}, {testimonial.company}</span>
                       </p>
                     </div>
                   </div>

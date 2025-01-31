@@ -5,7 +5,11 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Calendar } from "@/components/ui/calendar";
 import { useState } from "react";
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
 import { cn } from "@/lib/utils";
 import { format } from "date-fns";
 import { Label } from "@/components/ui/label";
@@ -25,39 +29,39 @@ const Contact1 = () => {
               </div>
               <div className="flex flex-col gap-2">
                 <h4 className="text-3xl md:text-5xl tracking-tighter max-w-xl text-left font-regular">
-                  Something new
+                  Simplify Your Business Operations
                 </h4>
                 <p className="text-lg leading-relaxed tracking-tight text-muted-foreground max-w-sm text-left">
-                  Managing a small business today is already tough. Avoid
-                  further complications by ditching outdated, tedious trade
-                  methods.
+                  Running a small business is already challenging. Say goodbye
+                  to outdated, tedious methods and embrace a seamless, modern
+                  solution designed to make your work easier.
                 </p>
               </div>
             </div>
             <div className="flex flex-row gap-6 items-start text-left">
-                <Check className="w-4 h-4 mt-2 text-primary" />
+              <Check className="w-4 h-4 mt-2 text-primary" />
               <div className="flex flex-col gap-1">
                 <p>Easy to use</p>
                 <p className="text-muted-foreground text-sm">
-                  We&apos;ve made it easy to use and understand.
+                  Intuitive design that anyone can navigate.
                 </p>
               </div>
             </div>
             <div className="flex flex-row gap-6 items-start text-left">
-                <Check className="w-4 h-4 mt-2 text-primary" />
+              <Check className="w-4 h-4 mt-2 text-primary" />
               <div className="flex flex-col gap-1">
                 <p>Fast and reliable</p>
                 <p className="text-muted-foreground text-sm">
-                  We&apos;ve made it easy to use and understand.
+                  Get things done efficiently without delays.
                 </p>
               </div>
             </div>
             <div className="flex flex-row gap-6 items-start text-left">
-                <Check className="w-4 h-4 mt-2 text-primary" />
+              <Check className="w-4 h-4 mt-2 text-primary" />
               <div className="flex flex-col gap-1">
                 <p>Beautiful and modern</p>
                 <p className="text-muted-foreground text-sm">
-                  We&apos;ve made it easy to use and understand.
+                  A sleek, professional interface tailored for business success.
                 </p>
               </div>
             </div>
