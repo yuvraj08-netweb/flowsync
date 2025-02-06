@@ -9,19 +9,19 @@ const Feature2 = () => (
           <Badge>Platform</Badge>
         </div>
         <div className="flex gap-2 flex-col">
-          <h2 className="text-3xl md:text-5xl tracking-tighter lg:max-w-xl font-regular">
+          <h2 className="text-3xl md:text-5xl tracking-tighter lg:max-w-xl font-regular text-white">
             Why Choose FlowSync?
           </h2>
-          <p className="text-lg max-w-xl lg:max-w-xl leading-relaxed tracking-tight text-muted-foreground">
+          <p className="text-lg max-w-xl lg:max-w-xl leading-relaxed tracking-tight text-white">
           Everything You Need to Work Smarter, Faster, and More Efficiently
           </p>
         </div>
         <div className="flex gap-10 pt-12 flex-col w-full">
           <div className="grid grid-cols-2 items-start lg:grid-cols-3 gap-10">
             <div className="flex flex-row gap-6 w-full items-start">
-              <Check className="w-4 h-4 mt-2 text-primary" />
+              <Check className="w-4 h-4 mt-2 text-white" />
               <div className="flex flex-col gap-1">
-                <p>Effortless Collaboration</p>
+                <p className="text-white">Effortless Collaboration</p>
                 <p className="text-muted-foreground text-sm">
                   Unite your team with real-time updates and smooth
                   communication. Achieve more together.
@@ -29,9 +29,9 @@ const Feature2 = () => (
               </div>
             </div>
             <div className="flex flex-row gap-6 items-start">
-              <Check className="w-4 h-4 mt-2 text-primary" />
+              <Check className="w-4 h-4 mt-2 text-white" />
               <div className="flex flex-col gap-1">
-                <p>Powerful Analytics</p>
+                <p className="text-white">Powerful Analytics</p>
                 <p className="text-muted-foreground text-sm">
                   Make informed decisions with clear, actionable insights from
                   our intuitive analytics dashboard.
@@ -39,9 +39,9 @@ const Feature2 = () => (
               </div>
             </div>
             <div className="flex flex-row gap-6 items-start">
-              <Check className="w-4 h-4 mt-2 text-primary" />
+              <Check className="w-4 h-4 mt-2 text-white" />
               <div className="flex flex-col gap-1">
-                <p>Customizable Workflows</p>
+                <p className="text-white">Customizable Workflows</p>
                 <p className="text-muted-foreground text-sm">
                   Build workflows that match your process with flexible,
                   adaptable tools.
@@ -49,9 +49,9 @@ const Feature2 = () => (
               </div>
             </div>
             <div className="flex flex-row gap-6 w-full items-start">
-              <Check className="w-4 h-4 mt-2 text-primary" />
+              <Check className="w-4 h-4 mt-2 text-white" />
               <div className="flex flex-col gap-1">
-                <p>Secure Data Protection</p>
+                <p className="text-white">Secure Data Protection</p>
                 <p className="text-muted-foreground text-sm">
                   Your data is safeguarded with industry-leading security
                   measures, ensuring privacy and reliability
@@ -59,9 +59,9 @@ const Feature2 = () => (
               </div>
             </div>
             <div className="flex flex-row gap-6 items-start">
-              <Check className="w-4 h-4 mt-2 text-primary" />
+              <Check className="w-4 h-4 mt-2 text-white" />
               <div className="flex flex-col gap-1">
-                <p>Seamless Integrations</p>
+                <p className="text-white">Seamless Integrations</p>
                 <p className="text-muted-foreground text-sm">
                   Connect with your favorite tools effortlessly. Integrate with
                   popular apps to streamline your workflow.
@@ -69,9 +69,9 @@ const Feature2 = () => (
               </div>
             </div>
             <div className="flex flex-row gap-6 items-start">
-              <Check className="w-4 h-4 mt-2 text-primary" />
+              <Check className="w-4 h-4 mt-2 text-white" />
               <div className="flex flex-col gap-1">
-                <p>AI-Powered Automation</p>
+                <p className="text-white">AI-Powered Automation</p>
                 <p className="text-muted-foreground text-sm">
                   Boost productivity with AI-driven automation. Automate
                   repetitive tasks and focus on what matters most.
