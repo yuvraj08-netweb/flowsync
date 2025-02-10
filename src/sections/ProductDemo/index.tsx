@@ -4,6 +4,11 @@ import { useState } from "react";
 import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
 import { GripVertical } from "lucide-react";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Feature9 = () => {
   const [inset, setInset] = useState<number>(50);
@@ -25,6 +30,29 @@ const Feature9 = () => {
     setInset(percentage);
   };
 
+  useGSAP(()=>{
+    gsap.from(".fadeInUp",{
+      duration: 1.5,
+      y: 100,
+      opacity: 0,
+      scrollTrigger:{
+        trigger: ".fadeInUp",
+        start: "top 80%",
+        scroller:"body",
+      }
+    })
+    gsap.from(".fadeDown",{
+      duration: 2,
+      y: -60,
+      opacity: 0,
+      scrollTrigger:{
+        trigger: ".fadeDown",
+        start: "top 90%",
+        scroller:"body",
+      }
+    })
+  })
+
   return (
     <div className="w-full py-20 lg:py-40">
       <div className="container mx-auto">
@@ -32,11 +60,11 @@ const Feature9 = () => {
           <div>
             <Badge>Platform</Badge>
           </div>
-          <div className="flex gap-2 flex-col">
-            <h2 className="text-3xl md:text-5xl tracking-tighter lg:max-w-xl font-regular">
+          <div className="flex gap-2 flex-col ">
+            <h2 className="text-3xl md:text-5xl tracking-tighter lg:max-w-xl font-regular fadeInUp">
               Transform Challenges into Growth!
             </h2>
-            <p className="text-lg max-w-xl lg:max-w-xl leading-relaxed tracking-tight text-muted-foreground">
+            <p className="text-lg max-w-xl lg:max-w-xl leading-relaxed tracking-tight text-muted-foreground fadeDown">
               Running a business can be overwhelming, but the right tools can
               turn struggles into success. Empower your team with insights,
               automation, and seamless collaboration to drive real results.

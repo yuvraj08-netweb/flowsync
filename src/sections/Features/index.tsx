@@ -2,7 +2,6 @@
 
 import { Check } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
-import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -10,16 +9,25 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const Feature2 = () => {
-  const fadeRef = useRef(null);
 
   useGSAP(()=>{
-    gsap.from(fadeRef.current,{
+    gsap.from(".fadeInFromLeft",{
       duration: 2,
-      x: 100,
+      x: -100,
       opacity: 0,
       scrollTrigger:{
-        trigger: fadeRef.current,
-        start: "top 70%",
+        trigger: ".fadeInFromLeft",
+        start: "top 85%",
+        scroller:"body",
+      }
+    })
+    gsap.from(".fadeUp",{
+      duration: 1.5,
+      y: 100,
+      opacity: 0,
+      scrollTrigger:{
+        trigger: ".fadeUp",
+        start: "top 80%",
         scroller:"body",
       }
     })
@@ -31,7 +39,7 @@ const Feature2 = () => {
           <div>
             <Badge>Platform</Badge>
           </div>
-          <div className="flex gap-2 flex-col" ref={fadeRef}>
+          <div className="flex gap-2 flex-col fadeInFromLeft">
             <h2 className="text-3xl md:text-5xl tracking-tighter lg:max-w-xl font-regular text-white">
               Why Choose FlowSync?
             </h2>
@@ -41,7 +49,7 @@ const Feature2 = () => {
           </div>
           <div className="flex gap-10 pt-12 flex-col w-full">
             <div className="grid grid-cols-2 items-start lg:grid-cols-3 gap-10">
-              <div className="flex flex-row gap-6 w-full items-start">
+              <div className="fadeUp flex flex-row gap-6 w-full items-start">
                 <Check className="w-4 h-4 mt-2 text-white" />
                 <div className="flex flex-col gap-1">
                   <p className="text-white">Effortless Collaboration</p>
@@ -51,7 +59,7 @@ const Feature2 = () => {
                   </p>
                 </div>
               </div>
-              <div className="flex flex-row gap-6 items-start">
+              <div className="fadeUp flex flex-row gap-6 items-start">
                 <Check className="w-4 h-4 mt-2 text-white" />
                 <div className="flex flex-col gap-1">
                   <p className="text-white">Powerful Analytics</p>
@@ -61,7 +69,7 @@ const Feature2 = () => {
                   </p>
                 </div>
               </div>
-              <div className="flex flex-row gap-6 items-start">
+              <div className="fadeUp flex flex-row gap-6 items-start">
                 <Check className="w-4 h-4 mt-2 text-white" />
                 <div className="flex flex-col gap-1">
                   <p className="text-white">Customizable Workflows</p>
@@ -71,7 +79,7 @@ const Feature2 = () => {
                   </p>
                 </div>
               </div>
-              <div className="flex flex-row gap-6 w-full items-start">
+              <div className="fadeUp flex flex-row gap-6 w-full items-start">
                 <Check className="w-4 h-4 mt-2 text-white" />
                 <div className="flex flex-col gap-1">
                   <p className="text-white">Secure Data Protection</p>
@@ -81,7 +89,7 @@ const Feature2 = () => {
                   </p>
                 </div>
               </div>
-              <div className="flex flex-row gap-6 items-start">
+              <div className="fadeUp flex flex-row gap-6 items-start">
                 <Check className="w-4 h-4 mt-2 text-white" />
                 <div className="flex flex-col gap-1">
                   <p className="text-white">Seamless Integrations</p>
@@ -91,7 +99,7 @@ const Feature2 = () => {
                   </p>
                 </div>
               </div>
-              <div className="flex flex-row gap-6 items-start">
+              <div className="fadeUp flex flex-row gap-6 items-start">
                 <Check className="w-4 h-4 mt-2 text-white" />
                 <div className="flex flex-col gap-1">
                   <p className="text-white">AI-Powered Automation</p>
