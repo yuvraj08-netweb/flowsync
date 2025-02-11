@@ -15,6 +15,7 @@ const Case2 = () => {
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
   const { theme } = useTheme();
+  console.log(theme,"theme")
   useEffect(() => {
     if (!api) {
       return;
@@ -51,7 +52,7 @@ const Case2 = () => {
                         alt={`${company.name} Logo`}
                         width={100}
                         height={100}
-                        style={{ filter: theme === "dark" || theme === "system" ? "invert(1)" : "none" }}
+                        style={{ filter: theme === "dark" ? "invert(1)" : "none" }}
                       />
                     </div>
                   </CarouselItem>
